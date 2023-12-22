@@ -8,7 +8,7 @@ class Paragraph {
     static const std::vector<std::string> sentence_bank;
     static std::size_t total_sentence_count;
     static std::size_t total_paragraph_count;
-    std::vector<std::string>own_sentences;
+    std::vector<std::string> own_sentences;
 
    public:
     static std::vector<std::string>::size_type get_sentence_bank_size();
@@ -19,6 +19,7 @@ class Paragraph {
     }
 
     void pick_and_add_sentence();
+    std::vector<std::string> get_sentences();
 };
 
 #endif

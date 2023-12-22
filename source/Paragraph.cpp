@@ -45,3 +45,7 @@ void Paragraph::pick_and_add_sentence() {
     own_sentences.push_back(sentence);
     return;
 }
+
+std::vector<std::string> Paragraph::get_sentences() {
+    return this->own_sentences;
+}
