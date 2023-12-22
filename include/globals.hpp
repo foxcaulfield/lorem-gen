@@ -5,6 +5,7 @@
 #include <cstdlib>  // for rand() and srand()
 #include <ctime>    // for time()
 #include <iostream>
+#include <stdexcept>
 #include <string>
 #include <vector>
 
