@@ -4,10 +4,10 @@
 int main(int argc, char *argv[]) {
     try {
         std::srand(static_cast<unsigned>(std::time(nullptr)));
-        // std::cout << "Args count: " << argc << std::endl;
 
         if (argc != 3) {
-            throw std::invalid_argument("Usage: lorem-gen <number> <number>");
+            throw std::invalid_argument(
+                "Usage: lorem-gen <paragraph_count> <sentence_count>");
         }
 
         int paragraph_count = std::atoi(argv[1]);
@@ -15,12 +15,9 @@ int main(int argc, char *argv[]) {
 
         if (paragraph_count <= 0 || sentence_count <= 0) {
             throw std::invalid_argument(
-                "Program argument is not a positive integer.");
+                "Invalid argument: paragraph_count and sentence_count must be "
+                "positive integers.");
         }
-
-        // for (int i = 0; i < argc; ++i) {
-        //     std::cout << argv[i] << std::endl;
-        // }
 
         std::vector<Paragraph> paragraphs;
 
